@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framework Workbook - Word Version</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            margin: 0;
+            padding: 20px;
+        }
+        .document {
+            max-width: 816px; /* A4 width at 96 DPI */
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #c41e3a;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        h2 {
+            color: #c41e3a;
+            font-size: 24px;
+            margin-top: 40px;
+            border-bottom: 2px solid #c41e3a;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #c41e3a;
+            font-size: 18px;
+            margin-top: 25px;
+        }
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .info-section {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 20px 0;
+            background: #f9f9f9;
+        }
+        .form-field {
+            margin: 15px 0;
+        }
+        .form-field label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #c41e3a;
+        }
+        .form-field input, .form-field textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .form-field textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .bullet-list {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .bullet-list li {
+            margin-bottom: 15px;
+            list-style-type: none;
+            position: relative;
+            padding-left: 20px;
+        }
+        .bullet-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #c41e3a;
+            font-weight: bold;
+        }
+        .page-break {
+            page-break-before: always;
+            margin-top: 0;
+        }
+        .checklist {
+            margin: 20px 0;
+        }
+        .checklist-item {
+            margin: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .checklist-item input[type="checkbox"] {
+            position: absolute;
+            left: 0;
+            top: 3px;
+        }
+        .executive-summary {
+            border: 2px solid #c41e3a;
+            padding: 20px;
+            margin: 30px 0;
+            background: #ffe4e1;
+        }
+        .print-btn {
+            background: #c41e3a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block;
+        }
+        @media print {
+            .print-btn {
+                display: none;
+            }
+            .document {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="document">
+        <h1>Challenge-Based Client Solution Framework</h1>
+        <p class="subtitle">Working Document</p>
+        
+        <div class="info-section">
+            <div class="form-field">
+                <label>Project Name:</label>
+                <input type="text" placeholder="Enter project name">
+            </div>
+            <div class="form-field">
+                <label>Date:</label>
+                <input type="date">
+            </div>
+            <div class="form-field">
+                <label>Team Members:</label>
+                <textarea placeholder="List all team members involved"></textarea>
+            </div>
+        </div>
+
+        <div class="executive-summary">
+            <h2>Executive Summary</h2>
+            <p>To be completed after framework completion</p>
+            <div class="form-field">
+                <textarea placeholder="Summarise key findings, decisions, and next steps" rows="10"></textarea>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h2>Question 1: Market Analysis</h2>
+            
+            <div class="form-field">
+                <label>Current Understanding:</label>
+                <textarea placeholder="What do we know about the market/environment?"></textarea>
+            </div>
+
+            <div class="form-field">
+                <label>Key Assumptions:</label>
+                <ul class="bullet-list">
+                    <li><input type="text" placeholder="Assumption 1"></li>
+                    <li><input type="text" placeholder="Assumption 2"></li>
+                    <li><input type="text" placeholder="Assumption 3"></li>
+                    <li><input type="text" placeholder="Assumption 4"></li>
+                </ul>
+            </div>
+
+            <div class="form-field">
+                <label>Evidence/Data:</label>
+                <textarea placeholder="What evidence supports or challenges these assumptions?"></textarea>
+            </div>
+
+            <h3>Scenarios</h3>
+            <div class="form-field">
+                <label>Optimistic Scenario:</label>
+                <textarea placeholder="Best case market conditions"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Neutral Scenario:</label>
+                <textarea placeholder="Most likely market conditions"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Pessimistic Scenario:</label>
+                <textarea placeholder="Worst case market conditions"></textarea>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h2>Question 2: Mission Clarity</h2>
+            
+            <div class="form-field">
+                <label>Stated Objective:</label>
+                <textarea placeholder="What have we been asked to achieve?"></textarea>
+            </div>
+
+            <div class="form-field">
+                <label>Alternative Problem Statements:</label>
+                <ol>
+                    <li><textarea placeholder="Alternative way to frame the problem" rows="2"></textarea></li>
+                    <li><textarea placeholder="Another perspective on the challenge" rows="2"></textarea></li>
+                </ol>
+            </div>
+
+            <h3>Stakeholder Analysis</h3>
+            <div class="form-field">
+                <label>Who Benefits:</label>
+                <textarea placeholder="List stakeholders who gain from solving this"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Who Resists:</label>
+                <textarea placeholder="List stakeholders who might oppose changes"></textarea>
+            </div>
+
+            <div class="form-field">
+                <label>What Happens If We Do Nothing:</label>
+                <textarea placeholder="Describe the consequences of inaction"></textarea>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h2>Question 3: Success Metrics</h2>
+            
+            <div class="form-field">
+                <label>Success Two Years From Now:</label>
+                <textarea placeholder="Describe what success looks like in detail"></textarea>
+            </div>
+
+            <h3>Key Metrics</h3>
+            <div class="form-field">
+                <label>Metric 1:</label>
+                <input type="text" placeholder="Metric name">
+                <input type="text" placeholder="Target value" style="margin-top: 5px;">
+                <textarea placeholder="Potential unintended consequence" rows="2" style="margin-top: 5px;"></textarea>
+                <input type="text" placeholder="Balancing metric" style="margin-top: 5px;">
+            </div>
+
+            <div class="form-field">
+                <label>Metric 2:</label>
+                <input type="text" placeholder="Metric name">
+                <input type="text" placeholder="Target value" style="margin-top: 5px;">
+                <textarea placeholder="Potential unintended consequence" rows="2" style="margin-top: 5px;"></textarea>
+                <input type="text" placeholder="Balancing metric" style="margin-top: 5px;">
+            </div>
+
+            <div class="form-field">
+                <label>Metric 3:</label>
+                <input type="text" placeholder="Metric name">
+                <input type="text" placeholder="Target value" style="margin-top: 5px;">
+                <textarea placeholder="Potential unintended consequence" rows="2" style="margin-top: 5px;"></textarea>
+                <input type="text" placeholder="Balancing metric" style="margin-top: 5px;">
+            </div>
+
+            <div class="form-field">
+                <label>What Does Failure Look Like:</label>
+                <textarea placeholder="Describe failure scenario using same metrics"></textarea>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h2>Question 4: Options Generation</h2>
+            
+            <h3>Option A: The Expected Solution</h3>
+            <div class="form-field">
+                <textarea placeholder="What everyone assumes we'll do"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Pros:</label>
+                <textarea placeholder="Benefits of this approach"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Cons:</label>
+                <textarea placeholder="Drawbacks of this approach"></textarea>
+            </div>
+
+            <h3>Option B: The Opposite Approach</h3>
+            <div class="form-field">
+                <textarea placeholder="What if we did the reverse?"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Pros:</label>
+                <textarea placeholder="Benefits of this approach"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Cons:</label>
+                <textarea placeholder="Drawbacks of this approach"></textarea>
+            </div>
+
+            <h3>Option C: The Minimal Version</h3>
+            <div class="form-field">
+                <textarea placeholder="Least resources, fastest path"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Pros:</label>
+                <textarea placeholder="Benefits of this approach"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Cons:</label>
+                <textarea placeholder="Drawbacks of this approach"></textarea>
+            </div>
+
+            <h3>Option D: The Moonshot</h3>
+            <div class="form-field">
+                <textarea placeholder="Unlimited resources approach"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Pros:</label>
+                <textarea placeholder="Benefits of this approach"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Cons:</label>
+                <textarea placeholder="Drawbacks of this approach"></textarea>
+            </div>
+
+            <h3>Option E: Do Nothing Strategically</h3>
+            <div class="form-field">
+                <textarea placeholder="Active choice to wait"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Pros:</label>
+                <textarea placeholder="Benefits of waiting"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Cons:</label>
+                <textarea placeholder="Risks of waiting"></textarea>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h2>Question 5: Stress Testing</h2>
+            
+            <h3>Stress Scenarios</h3>
+            <div class="form-field">
+                <label>Budget Cut by 50%:</label>
+                <textarea placeholder="How would each option perform?"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Key Team Members Leave:</label>
+                <textarea placeholder="How would each option survive?"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Timeline Compressed by Half:</label>
+                <textarea placeholder="Which options remain viable?"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Major Competitor Launches First:</label>
+                <textarea placeholder="How would we respond?"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Technology Fails:</label>
+                <textarea placeholder="What are the fallback plans?"></textarea>
+            </div>
+            <div class="form-field">
+                <label>Market Conditions Change:</label>
+                <textarea placeholder="How flexible is each option?"></textarea>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h2>Question 6: Early Warning Systems</h2>
+            
+            <h3>Potential Failures</h3>
+            <div class="form-field">
+                <label>Failure Mode 1:</label>
+                <input type="text" placeholder="What could go wrong">
+                <textarea placeholder="Early warning signs (90 days out)" rows="2" style="margin-top: 5px;"></textarea>
+                <textarea placeholder="Action if warning appears" rows="2" style="margin-top: 5px;"></textarea>
+            </div>
+
+            <div class="form-field">
+                <label>Failure Mode 2:</label>
+                <input type="text" placeholder="What could go wrong">
+                <textarea placeholder="Early warning signs (90 days out)" rows="2" style="margin-top: 5px;"></textarea>
+                <textarea placeholder="Action if warning appears" rows="2" style="margin-top: 5px;"></textarea>
+            </div>
+
+            <div class="form-field">
+                <label>Failure Mode 3:</label>
+                <input type="text" placeholder="What could go wrong">
+                <textarea placeholder="Early warning signs (90 days out)" rows="2" style="margin-top: 5px;"></textarea>
+                <textarea placeholder="Action if warning appears" rows="2" style="margin-top: 5px;"></textarea>
+            </div>
+
+            <div class="form-field">
+                <label>Kill Criteria:</label>
+                <textarea placeholder="What would trigger a complete stop/pivot?"></textarea>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h2>Question 7: Control & Flexibility</h2>
+            
+            <h3>Decision Rights</h3>
+            <div class="form-field">
+                <label>Daily Operations:</label>
+                <input type="text" placeholder="Who decides">
+                <input type="text" placeholder="Who can veto" style="margin-top: 5px;">
+                <input type="text" placeholder="Review frequency" style="margin-top: 5px;">
+            </div>
+
+            <div class="form-field">
+                <label>Scope Changes:</label>
+                <input type="text" placeholder="Who decides">
+                <input type="text" placeholder="Who can veto" style="margin-top: 5px;">
+                <input type="text" placeholder="Review frequency" style="margin-top: 5px;">
+            </div>
+
+            <div class="form-field">
+                <label>Strategy Pivots:</label>
+                <input type="text" placeholder="Who decides">
+                <input type="text" placeholder="Who can veto" style="margin-top: 5px;">
+                <input type="text" placeholder="Review frequency" style="margin-top: 5px;">
+            </div>
+
+            <h3>Flexibility Parameters</h3>
+            <div class="form-field">
+                <label>What Can Change:</label>
+                <textarea placeholder="List elements that can be adjusted"></textarea>
+            </div>
+            <div class="form-field">
+                <label>What Must Remain Fixed:</label>
+                <textarea placeholder="List non-negotiable elements"></textarea>
+            </div>
+
+            <h3>Feedback Loops</h3>
+            <div class="form-field">
+                <label>How We Collect Feedback:</label>
+                <textarea placeholder="Describe feedback mechanisms"></textarea>
+            </div>
+            <div class="form-field">
+                <label>How We Act on Feedback:</label>
+                <textarea placeholder="Describe response processes"></textarea>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h2>Action Plan</h2>
+            
+            <h3>Priority Actions</h3>
+            <div class="form-field">
+                <label>Action 1:</label>
+                <input type="text" placeholder="What needs to happen first">
+                <input type="text" placeholder="Owner" style="margin-top: 5px;">
+                <input type="date" placeholder="Due date" style="margin-top: 5px;">
+            </div>
+
+            <div class="form-field">
+                <label>Action 2:</label>
+                <input type="text" placeholder="What needs to happen next">
+                <input type="text" placeholder="Owner" style="margin-top: 5px;">
+                <input type="date" placeholder="Due date" style="margin-top: 5px;">
+            </div>
+
+            <div class="form-field">
+                <label>Action 3:</label>
+                <input type="text" placeholder="What follows">
+                <input type="text" placeholder="Owner" style="margin-top: 5px;">
+                <input type="date" placeholder="Due date" style="margin-top: 5px;">
+            </div>
+
+            <div class="form-field">
+                <label>Next Review Date:</label>
+                <input type="date">
+            </div>
+
+            <div class="checklist">
+                <h3>Final Checklist</h3>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check1">
+                    <label for="check1">We've challenged every comfortable assumption</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check2">
+                    <label for="check2">We've generated options we initially disliked</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check3">
+                    <label for="check3">We've planned for failure as thoroughly as success</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check4">
+                    <label for="check4">We've assigned devil's advocates to key decisions</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check5">
+                    <label for="check5">We've built in early warning systems</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="check6">
+                    <label for="check6">We've made our logic visible and testable</label>
+                </div>
+            </div>
+        </div>
+
+        <button class="print-btn" onclick="window.print()">Print Document</button>
+    </div>
+</body>
+</html>
