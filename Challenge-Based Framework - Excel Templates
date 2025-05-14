@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framework Templates - Excel Version</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #c41e3a;
+            border-bottom: 3px solid #c41e3a;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #c41e3a;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #c41e3a;
+            color: white;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .status-dropdown {
+            width: 100%;
+        }
+        .export-btn {
+            background: #c41e3a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .export-btn:hover {
+            background: #8b0000;
+        }
+        .tab-container {
+            margin: 20px 0;
+        }
+        .tab-buttons {
+            display: flex;
+            border-bottom: 2px solid #ddd;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            background: #f8f8f8;
+            border: none;
+            cursor: pointer;
+            border-top: 2px solid transparent;
+        }
+        .tab-button.active {
+            background: white;
+            border-top: 2px solid #c41e3a;
+            color: #c41e3a;
+            font-weight: bold;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px 0;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .risk-high { background-color: #ffcccc; }
+        .risk-medium { background-color: #ffffcc; }
+        .risk-low { background-color: #ccffcc; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Challenge-Based Framework - Excel Templates</h1>
+        <p>Interactive templates for implementing the framework. Fill in the fields and export when complete.</p>
+        
+        <div class="tab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="showTab('tracker')">Question Tracker</button>
+                <button class="tab-button" onclick="showTab('metrics')">Success Metrics</button>
+                <button class="tab-button" onclick="showTab('options')">Options Analysis</button>
+                <button class="tab-button" onclick="showTab('risk')">Risk Register</button>
+                <button class="tab-button" onclick="showTab('rights')">Decision Rights</button>
+            </div>
+
+            <!-- Question Tracker Tab -->
+            <div id="tracker" class="tab-content active">
+                <h2>Question Tracker</h2>
+                <table>
+                    <tr>
+                        <th>Question</th>
+                        <th>Status</th>
+                        <th>Key Findings</th>
+                        <th>Next Actions</th>
+                        <th>Owner</th>
+                        <th>Due Date</th>
+                    </tr>
+                    <tr>
+                        <td>Q1: Market Analysis</td>
+                        <td>
+                            <select class="status-dropdown">
+                                <option>Not Started</option>
+                                <option>In Progress</option>
+                                <option>Complete</option>
+                                <option>Under Review</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><input type="text"></td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Q2: Mission Clarity</td>
+                        <td>
+                            <select class="status-dropdown">
+                                <option>Not Started</option>
+                                <option>In Progress</option>
+                                <option>Complete</option>
+                                <option>Under Review</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><input type="text"></td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Q3: Success Metrics</td>
+                        <td>
+                            <select class="status-dropdown">
+                                <option>Not Started</option>
+                                <option>In Progress</option>
+                                <option>Complete</option>
+                                <option>Under Review</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><input type="text"></td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Q4: Options</td>
+                        <td>
+                            <select class="status-dropdown">
+                                <option>Not Started</option>
+                                <option>In Progress</option>
+                                <option>Complete</option>
+                                <option>Under Review</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><input type="text"></td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Q5: Stress Testing</td>
+                        <td>
+                            <select class="status-dropdown">
+                                <option>Not Started</option>
+                                <option>In Progress</option>
+                                <option>Complete</option>
+                                <option>Under Review</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><input type="text"></td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Q6: Early Warnings</td>
+                        <td>
+                            <select class="status-dropdown">
+                                <option>Not Started</option>
+                                <option>In Progress</option>
+                                <option>Complete</option>
+                                <option>Under Review</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><input type="text"></td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Q7: Control & Flexibility</td>
+                        <td>
+                            <select class="status-dropdown">
+                                <option>Not Started</option>
+                                <option>In Progress</option>
+                                <option>Complete</option>
+                                <option>Under Review</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><textarea rows="2"></textarea></td>
+                        <td><input type="text"></td>
+                        <td><input type="date"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Success Metrics Tab -->
+            <div id="metrics" class="tab-content">
+                <h2>Success Metrics</h2>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Target</th>
+                        <th>Current</th>
+                        <th>Unintended Consequence</th>
+                        <th>Balancing Metric</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Enter metric"></td>
+                        <td><input type="text" placeholder="Target value"></td>
+                        <td><input type="text" placeholder="Current value"></td>
+                        <td><textarea rows="2" placeholder="Potential negative outcome"></textarea></td>
+                        <td><input type="text" placeholder="Counter-metric"></td>
+                        <td>
+                            <select>
+                                <option>On Track</option>
+                                <option>At Risk</option>
+                                <option>Behind</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Enter metric"></td>
+                        <td><input type="text" placeholder="Target value"></td>
+                        <td><input type="text" placeholder="Current value"></td>
+                        <td><textarea rows="2" placeholder="Potential negative outcome"></textarea></td>
+                        <td><input type="text" placeholder="Counter-metric"></td>
+                        <td>
+                            <select>
+                                <option>On Track</option>
+                                <option>At Risk</option>
+                                <option>Behind</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Enter metric"></td>
+                        <td><input type="text" placeholder="Target value"></td>
+                        <td><input type="text" placeholder="Current value"></td>
+                        <td><textarea rows="2" placeholder="Potential negative outcome"></textarea></td>
+                        <td><input type="text" placeholder="Counter-metric"></td>
+                        <td>
+                            <select>
+                                <option>On Track</option>
+                                <option>At Risk</option>
+                                <option>Behind</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Options Analysis Tab -->
+            <div id="options" class="tab-content">
+                <h2>Options Analysis</h2>
+                <table>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                        <th>Cost</th>
+                        <th>Risk Level</th>
+                        <th>Support</th>
+                        <th>Opposition</th>
+                    </tr>
+                    <tr>
+                        <td>A: Expected</td>
+                        <td><textarea rows="2" placeholder="What everyone expects us to do"></textarea></td>
+                        <td><textarea rows="2" placeholder="Benefits"></textarea></td>
+                        <td><textarea rows="2" placeholder="Drawbacks"></textarea></td>
+                        <td><input type="text" placeholder="£"></td>
+                        <td>
+                            <select onchange="updateRiskColor(this)">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2" placeholder="Who supports"></textarea></td>
+                        <td><textarea rows="2" placeholder="Who opposes"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>B: Opposite</td>
+                        <td><textarea rows="2" placeholder="The reverse approach"></textarea></td>
+                        <td><textarea rows="2" placeholder="Benefits"></textarea></td>
+                        <td><textarea rows="2" placeholder="Drawbacks"></textarea></td>
+                        <td><input type="text" placeholder="£"></td>
+                        <td>
+                            <select onchange="updateRiskColor(this)">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2" placeholder="Who supports"></textarea></td>
+                        <td><textarea rows="2" placeholder="Who opposes"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>C: Minimal</td>
+                        <td><textarea rows="2" placeholder="Least resources, fastest path"></textarea></td>
+                        <td><textarea rows="2" placeholder="Benefits"></textarea></td>
+                        <td><textarea rows="2" placeholder="Drawbacks"></textarea></td>
+                        <td><input type="text" placeholder="£"></td>
+                        <td>
+                            <select onchange="updateRiskColor(this)">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2" placeholder="Who supports"></textarea></td>
+                        <td><textarea rows="2" placeholder="Who opposes"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>D: Moonshot</td>
+                        <td><textarea rows="2" placeholder="Unlimited resources approach"></textarea></td>
+                        <td><textarea rows="2" placeholder="Benefits"></textarea></td>
+                        <td><textarea rows="2" placeholder="Drawbacks"></textarea></td>
+                        <td><input type="text" placeholder="£"></td>
+                        <td>
+                            <select onchange="updateRiskColor(this)">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2" placeholder="Who supports"></textarea></td>
+                        <td><textarea rows="2" placeholder="Who opposes"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>E: Do Nothing</td>
+                        <td><textarea rows="2" placeholder="Strategic waiting"></textarea></td>
+                        <td><textarea rows="2" placeholder="Benefits"></textarea></td>
+                        <td><textarea rows="2" placeholder="Drawbacks"></textarea></td>
+                        <td><input type="text" placeholder="£"></td>
+                        <td>
+                            <select onchange="updateRiskColor(this)">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2" placeholder="Who supports"></textarea></td>
+                        <td><textarea rows="2" placeholder="Who opposes"></textarea></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Risk Register Tab -->
+            <div id="risk" class="tab-content">
+                <h2>Risk Register</h2>
+                <table>
+                    <tr>
+                        <th>Risk</th>
+                        <th>Probability</th>
+                        <th>Impact</th>
+                        <th>Early Warning Sign</th>
+                        <th>Trigger Point</th>
+                        <th>Mitigation Action</th>
+                    </tr>
+                    <tr>
+                        <td><textarea rows="2" placeholder="Describe the risk"></textarea></td>
+                        <td>
+                            <select>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2" placeholder="What to watch for"></textarea></td>
+                        <td><textarea rows="2" placeholder="When to act"></textarea></td>
+                        <td><textarea rows="2" placeholder="How to respond"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><textarea rows="2" placeholder="Describe the risk"></textarea></td>
+                        <td>
+                            <select>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2" placeholder="What to watch for"></textarea></td>
+                        <td><textarea rows="2" placeholder="When to act"></textarea></td>
+                        <td><textarea rows="2" placeholder="How to respond"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><textarea rows="2" placeholder="Describe the risk"></textarea></td>
+                        <td>
+                            <select>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </td>
+                        <td><textarea rows="2" placeholder="What to watch for"></textarea></td>
+                        <td><textarea rows="2" placeholder="When to act"></textarea></td>
+                        <td><textarea rows="2" placeholder="How to respond"></textarea></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Decision Rights Tab -->
+            <div id="rights" class="tab-content">
+                <h2>Decision Rights Matrix</h2>
+                <table>
+                    <tr>
+                        <th>Decision Type</th>
+                        <th>Decision Maker</th>
+                        <th>Consulted</th>
+                        <th>Informed</th>
+                        <th>Veto Power</th>
+                        <th>Review Frequency</th>
+                    </tr>
+                    <tr>
+                        <td>Daily Operations</td>
+                        <td><input type="text" placeholder="Who decides"></td>
+                        <td><textarea rows="2" placeholder="Who to consult"></textarea></td>
+                        <td><textarea rows="2" placeholder="Who to inform"></textarea></td>
+                        <td><input type="text" placeholder="Who can veto"></td>
+                        <td>
+                            <select>
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>Fortnightly</option>
+                                <option>Monthly</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Scope Changes</td>
+                        <td><input type="text" placeholder="Who decides"></td>
+                        <td><textarea rows="2" placeholder="Who to consult"></textarea></td>
+                        <td><textarea rows="2" placeholder="Who to inform"></textarea></td>
+                        <td><input type="text" placeholder="Who can veto"></td>
+                        <td>
+                            <select>
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>Fortnightly</option>
+                                <option>Monthly</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Strategy Pivots</td>
+                        <td><input type="text" placeholder="Who decides"></td>
+                        <td><textarea rows="2" placeholder="Who to consult"></textarea></td>
+                        <td><textarea rows="2" placeholder="Who to inform"></textarea></td>
+                        <td><input type="text" placeholder="Who can veto"></td>
+                        <td>
+                            <select>
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>Fortnightly</option>
+                                <option>Monthly</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <button class="export-btn" onclick="exportData()">Export to CSV</button>
+        <button class="export-btn" onclick="window.print()">Print</button>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function updateRiskColor(select) {
+            const row = select.closest('tr');
+            row.classList.remove('risk-low', 'risk-medium', 'risk-high');
+            
+            if (select.value === 'Low') {
+                row.classList.add('risk-low');
+            } else if (select.value === 'Medium') {
+                row.classList.add('risk-medium');
+            } else if (select.value === 'High') {
+                row.classList.add('risk-high');
+            }
+        }
+
+        function exportData() {
+            alert('Export functionality would be implemented here');
+        }
+    </script>
+</body>
+</html>
